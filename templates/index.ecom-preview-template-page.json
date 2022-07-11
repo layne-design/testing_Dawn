@@ -1,0 +1,13 @@
+{
+  "layout": "theme",
+  "sections": {
+    "ecom-preview-template-page": {
+      "type": "ecom-preview-template-page",
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "ecom-preview-template-page"
+  ]
+}
