@@ -1,0 +1,451 @@
+{% include 'ultimate-settings' %}
+
+{{ 'ultimate-slideshow.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'ultimate-slideshow.js' | asset_url }}" defer="defer"></script>
+
+<style>
+  #shopify-section-{{ section.id }} .ultimate-slideshow {
+    --ultimate-space-x: 100px;
+    --ultimate-space-y: 50px;
+  }
+
+  @media (min-width: {{ minTabletSize }}px) and (max-width: {{ maxTabletSize }}px) {
+    #shopify-section-{{ section.id }} .ultimate-slideshow .ultimate-slideshow-nav {
+      display: none;
+    }
+  }
+
+  @media (max-width: {{ maxMobileSize }}px) {
+    #shopify-section-{{ section.id }} .ultimate-slideshow {
+      --ultimate-space-x: 20px;
+      --ultimate-space-y: 20px;
+    }
+
+    #shopify-section-{{ section.id }} .ultimate-slideshow .ultimate-slideshow-nav {
+      display: none;
+    }
+
+    #shopify-section-{{ section.id }} .ultimate-slideshow .ultimate-slideshow-pagination {
+      bottom: 0px;
+    }
+
+    #shopify-section-{{ section.id }} .ultimate-slideshow .ultimate-slideshow-pagination .ultimate-slideshow-pagination-item {
+      width: 8px;
+      height: 8px;
+      border-width: 1px;
+    }
+
+    #shopify-section-{{ section.id }} .ultimate-slideshow .ultimate-slideshow-content .ultimate-slideshow-title {
+      font-size: 20px;
+    }
+
+    #shopify-section-{{ section.id }} .ultimate-slideshow .ultimate-slideshow-content .ultimate-slideshow-subtitle,
+    #shopify-section-{{ section.id }} .ultimate-slideshow .ultimate-slideshow-content .ultimate-slideshow-description {
+      margin-top: 10px;
+      font-size: 15px;
+    }
+
+    #shopify-section-{{ section.id }} .ultimate-slideshow .ultimate-slideshow-button-wrapper {
+      margin-top: 10px;
+    }
+
+    #shopify-section-{{ section.id }} .ultimate-slideshow .ultimate-slideshow-button {
+      padding: 6px 0px;
+      min-width: 90px;
+      font-size: 12px;
+    }
+  }
+
+  {%- for block in section.blocks -%}
+  {{ block.settings.title_font | font_face }}
+  {{ block.settings.subtitle_font | font_face }}
+  {{ block.settings.description_font | font_face }}
+  {{ block.settings.button_font | font_face }}
+  {%- endfor -%}
+
+  {%- if section.settings.css != blank -%}
+  {{ section.settings.css }}
+  {% endif %}
+</style>
+
+{% assign blockIds = section.blocks | map: "id" %}
+
+<ultimate-slideshow class="ultimate-sections ultimate-slideshow {% if section.settings.overlay != blank %} ultimate-slideshow-overlay{% endif %}{{section.settings.class}}" data-slide-animation="{{ section.settings.slide_animation }}" data-autoplay="{{ section.settings.autoplay }}" data-autoplay-delay="{{ section.settings.autoplay_delay }}" data-blocks="{{ blockIds | json | escape }}">
+  <div class="swiper">
+    <div class="swiper-wrapper">
+      {%- for block in section.blocks -%}
+        <div id="ultimate-slide-{{ block.id }}" class="ultimate-slideshow-slide ultimate-slideshow-slide-{{ block.settings.content_position }} ultimate-slideshow-slide-{{ block.settings.content_animation }} ultimate-slideshow-slide-{{ block.settings.content_align }} {{ block.settings.class }} swiper-slide" {{ block.shopify_attributes }}>
+          {%- if block.settings.image != blank -%}
+          <img srcset="{%- if block.settings.image.width >= 375 -%}{{ block.settings.image | img_url: '375x' }} 375w,{%- endif -%}
+            {%- if block.settings.image.width >= 750 -%}{{ block.settings.image | img_url: '750x' }} 750w,{%- endif -%}
+            {%- if block.settings.image.width >= 1100 -%}{{ block.settings.image | img_url: '1100x' }} 1100w,{%- endif -%}
+            {%- if block.settings.image.width >= 1500 -%}{{ block.settings.image | img_url: '1500x' }} 1500w,{%- endif -%}
+            {%- if block.settings.image.width >= 1780 -%}{{ block.settings.image | img_url: '1780x' }} 1780w,{%- endif -%}
+            {%- if block.settings.image.width >= 2000 -%}{{ block.settings.image | img_url: '2000x' }} 2000w,{%- endif -%}
+            {%- if block.settings.image.width >= 2800 -%}{{ block.settings.image | img_url: '2800x' }} 2800w{%- endif -%}"
+            src="{{ block.settings.image | img_url: '750x' }}"
+            loading="lazy"
+            alt="{{ block.settings.image.alt | escape }}"
+            width="{{ block.settings.image.width }}"
+            height="{{ block.settings.image.width | divided_by: block.settings.image.aspect_ratio }}"
+          >
+          {%- endif -%}
+          <div class="ultimate-slideshow-content">
+            <div class="ultimate-slideshow-content-inner">
+              {%- if block.settings.title != blank -%}
+              <div class="ultimate-slideshow-title" style="--us-font-family: {{ block.settings.title_font.family | escape }}, {{ block.settings.title_font.fallback_families | escape }}; --us-font-weight: {{ block.settings.title_font.weight }}; --us-color: {{ block.settings.title_color }};">{{ block.settings.title }}</div>
+              {%- endif -%}
+              {%- if block.settings.subtitle != blank -%}
+              <div class="ultimate-slideshow-subtitle" style="--us-font-family: {{ block.settings.subtitle_font.family | escape }}, {{ block.settings.subtitle_font.fallback_families | escape }}; --us-font-weight: {{ block.settings.subtitle_font.weight }}; --us-color: {{ block.settings.subtitle_color }};">{{ block.settings.subtitle }}</div>
+              {%- endif -%}
+              {%- if block.settings.description != blank -%}
+              <div class="ultimate-slideshow-description" style="--us-font-family: {{ block.settings.description_font.family | escape }}, {{ block.settings.description_font.fallback_families | escape }}; --us-font-weight: {{ block.settings.description_font.weight }}; --us-color: {{ block.settings.description_color }};">{{ block.settings.description }}</div>
+              {%- endif -%}
+              {%- if block.settings.button_text != blank -%}
+              <div class="ultimate-slideshow-button-wrapper">
+                <a class="ultimate-slideshow-button ultimate-slideshow-button-{{ block.settings.button_style }}" href="{{ block.settings.button_link }}" style="--us-font-family: {{ block.settings.button_font.family | escape }}, {{ block.settings.button_font.fallback_families | escape }}; --us-font-weight: {{ block.settings.button_font.weight }}; --us-color: {{ block.settings.button_color }}; --us-text-color: {{ block.settings.button_text_color }}; --us-hover-color: {{ block.settings.button_hover_color }}; --us-hover-text-color: {{ block.settings.button_hover_text_color }};">{{ block.settings.button_text }}</a>
+              </div>
+              {%- endif -%}
+            </div>
+          </div>
+        </div>
+      {%- endfor -%}
+    </div>
+
+    <div class="ultimate-slideshow-pagination" style="--us-color: {{ section.settings.nav_color }};"></div>
+
+    <div class="ultimate-slideshow-nav ultimate-slideshow-nav-prev" style="--us-color: {{ section.settings.nav_color }};">
+      <svg viewBox="0 0 100 100"><path d="M 10,50 L 60,100 L 70,90 L 30,50  L 70,10 L 60,0 Z"></path></svg>
+    </div>
+    <div class="ultimate-slideshow-nav ultimate-slideshow-nav-next" style="--us-color: {{ section.settings.nav_color }};">
+      <svg viewBox="0 0 100 100"><path d="M 10,50 L 60,100 L 70,90 L 30,50  L 70,10 L 60,0 Z" transform="translate(100, 100) rotate(180)"></path></svg>
+    </div>
+  </div>
+</ultimate-slideshow>
+
+{% schema %}
+{
+  "name": "Ulti Slideshow",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "select",
+      "id": "slide_animation",
+      "options": [
+        {
+          "value": "fade",
+          "label": "Fade"
+        },
+        {
+          "value": "slide-right",
+          "label": "Slide Right"
+        }
+      ],
+      "default": "fade",
+      "label": "Slide Animation"
+    },
+    {
+      "type": "select",
+      "id": "autoplay",
+      "options": [
+        {
+          "value": "yes",
+          "label": "Yes"
+        },
+        {
+          "value": "no",
+          "label": "No"
+        }
+      ],
+      "default": "no",
+      "label": "Autoplay"
+    },
+    {
+      "type": "number",
+      "id": "autoplay_delay",
+      "default": 5000,
+      "label": "Autoplay Delay"
+    },
+    {
+      "type": "checkbox",
+      "id": "overlay",
+      "default": false,
+      "label": "Show Slide Overlay"
+    },
+    {
+      "type": "color",
+      "id": "nav_color",
+      "default": "#ffffff",
+      "label": "Arrow & Dot Color"
+    },
+    {
+      "type": "text",
+      "id": "class",
+      "label": "CSS Class",
+      "info": "Add class to this section, for example: my-class-1 my-class-2"
+    },
+    {
+      "type": "textarea",
+      "id": "css",
+      "label": "Custom CSS",
+      "info": "Add custom CSS to this section"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "image",
+      "name": "Slide",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "font_picker",
+          "id": "title_font",
+          "label": "Title Font",
+          "default": "open_sans_n4"
+        },
+        {
+          "type": "color",
+          "id": "title_color",
+          "default": "#ffffff",
+          "label": "Title Color"
+        },
+        {
+          "type": "text",
+          "id": "subtitle",
+          "label": "Subtitle"
+        },
+        {
+          "type": "font_picker",
+          "id": "subtitle_font",
+          "label": "Subtitle Font",
+          "default": "open_sans_n4"
+        },
+        {
+          "type": "color",
+          "id": "subtitle_color",
+          "default": "#ffffff",
+          "label": "Subtitle Color"
+        },
+        {
+          "type": "richtext",
+          "id": "description",
+          "label": "Description"
+        },
+        {
+          "type": "font_picker",
+          "id": "description_font",
+          "label": "Description Font",
+          "default": "open_sans_n4"
+        },
+        {
+          "type": "color",
+          "id": "description_color",
+          "default": "#ffffff",
+          "label": "Description Color"
+        },
+        {
+          "type": "text",
+          "id": "button_text",
+          "label": "Button Text"
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "Button Link"
+        },
+        {
+          "type": "font_picker",
+          "id": "button_font",
+          "label": "Button Font",
+          "default": "open_sans_n4"
+        },
+        {
+          "type": "select",
+          "id": "button_style",
+          "options": [
+            {
+              "value": "outline-square",
+              "label": "Outline Square"
+            },
+            {
+              "value": "square",
+              "label": "Square"
+            },
+            {
+              "value": "outline-curve",
+              "label": "Outline Curve"
+            },
+            {
+              "value": "curve",
+              "label": "Curve"
+            }
+          ],
+          "default": "outline-square",
+          "label": "Button Style"
+        },
+        {
+          "type": "color",
+          "id": "button_color",
+          "default": "#ffffff",
+          "label": "Button Color"
+        },
+        {
+          "type": "color",
+          "id": "button_text_color",
+          "default": "#ffffff",
+          "label": "Button Text Color"
+        },
+        {
+          "type": "color",
+          "id": "button_hover_color",
+          "default": "#686868",
+          "label": "Button Hover Color"
+        },
+        {
+          "type": "color",
+          "id": "button_hover_text_color",
+          "default": "#686868",
+          "label": "Button Hover Text Color"
+        },
+        {
+          "type": "select",
+          "id": "content_align",
+          "options": [
+            {
+              "value": "center",
+              "label": "Center"
+            },
+            {
+              "value": "left",
+              "label": "Left"
+            },
+            {
+              "value": "right",
+              "label": "Right"
+            }
+          ],
+          "default": "left",
+          "label": "Content Align"
+        },
+        {
+          "type": "select",
+          "id": "content_position",
+          "options": [
+            {
+              "value": "top-left",
+              "label": "Top Left"
+            },
+            {
+              "value": "middle-left",
+              "label": "Middle Left"
+            },
+            {
+              "value": "bottom-left",
+              "label": "Bottom Left"
+            },
+            {
+              "value": "top-center",
+              "label": "Top Center"
+            },
+            {
+              "value": "middle-center",
+              "label": "Middle Center"
+            },
+            {
+              "value": "bottom-center",
+              "label": "Bottom Center"
+            },
+            {
+              "value": "top-right",
+              "label": "Top Right"
+            },
+            {
+              "value": "middle-right",
+              "label": "Middle Right"
+            },
+            {
+              "value": "bottom-right",
+              "label": "Bottom Right"
+            }
+          ],
+          "default": "middle-center",
+          "label": "Content Position"
+        },
+        {
+          "type": "select",
+          "id": "content_animation",
+          "options": [
+            {
+              "value": "slide-up",
+              "label": "Slide Up"
+            },
+            {
+              "value": "slide-down",
+              "label": "Slide Down"
+            },
+            {
+              "value": "slide-left",
+              "label": "Slide Left"
+            },
+            {
+              "value": "slide-right",
+              "label": "Slide Right"
+            },
+            {
+              "value": "bounce-in",
+              "label": "Bounce In"
+            },
+            {
+              "value": "shake-x",
+              "label": "Shake X"
+            },
+            {
+              "value": "shake-y",
+              "label": "Shake Y"
+            },
+            {
+              "value": "tada",
+              "label": "Tada"
+            },
+            {
+              "value": "heart-beat",
+              "label": "Heart Beat"
+            },
+            {
+              "value": "flip-in-x",
+              "label": "Flip in X"
+            },
+            {
+              "value": "flip-in-y",
+              "label": "Flip in Y"
+            }
+          ],
+          "default": "slide-up",
+          "label": "Content Animation"
+        },
+        {
+          "type": "text",
+          "id": "class",
+          "label": "CSS Class",
+          "info": "Add class to this slide, for example: my-class-1 my-class-2"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Ulti Slideshow",
+      "category": "An_ultimate_section"
+    }
+  ]
+}
+{% endschema %}
