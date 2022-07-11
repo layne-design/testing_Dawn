@@ -1,6 +1,7 @@
 <!doctype html>
 <html class="no-js" lang="{{ request.locale.iso_code }}">
   <head>
+ {%- render 'ecom_header' -%}
  {%- render 'layouthub_header' -%}
     
    <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -179,5 +180,5 @@
       <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
   {%- render 'layouthub_footer' -%} 
- </body>
+ {%- render "ecom_footer"-%}</body>
 </html>
