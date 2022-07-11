@@ -2,6 +2,38 @@
   "sections": {
     "16575275821cd9ee49": {
       "type": "ultimate-slideshow",
+      "blocks": {
+        "96a6b2ca-1a4c-4402-b6aa-5a626a34307d": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/9A097BA8-6802-4CB3-B37E-0E8EA1691A33.jpg",
+            "title": "",
+            "title_font": "open_sans_n4",
+            "title_color": "#ffffff",
+            "subtitle": "Hello",
+            "subtitle_font": "open_sans_n4",
+            "subtitle_color": "#ffffff",
+            "description": "<p>hello this is first slide<\/p>",
+            "description_font": "open_sans_n4",
+            "description_color": "#ffffff",
+            "button_text": "gfhdf",
+            "button_link": "",
+            "button_font": "open_sans_n4",
+            "button_style": "outline-square",
+            "button_color": "#ffffff",
+            "button_text_color": "#ffffff",
+            "button_hover_color": "#686868",
+            "button_hover_text_color": "#cd9575",
+            "content_align": "left",
+            "content_position": "middle-left",
+            "content_animation": "slide-up",
+            "class": ""
+          }
+        }
+      },
+      "block_order": [
+        "96a6b2ca-1a4c-4402-b6aa-5a626a34307d"
+      ],
       "settings": {
         "slide_animation": "fade",
         "autoplay": "no",
