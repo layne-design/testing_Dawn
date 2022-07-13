@@ -79,6 +79,7 @@
         },
         "column2": {
           "type": "column",
+          "disabled": true,
           "settings": {
             "image": "shopify:\/\/shop_images\/E835B060-D106-43ED-A53F-F5B34FCF9E99.jpg",
             "title": "BREASTFEEDING MUMS",
@@ -87,6 +88,7 @@
         },
         "column3": {
           "type": "column",
+          "disabled": true,
           "settings": {
             "image": "shopify:\/\/shop_images\/3FD89607-BD78-497C-B89E-B2A18F98AA29.jpg",
             "title": "PREGNANCY CARE BOX",
