@@ -71,6 +71,7 @@
       "blocks": {
         "column1": {
           "type": "column",
+          "disabled": true,
           "settings": {
             "image": "shopify:\/\/shop_images\/BC903CAE-FC79-421C-A734-7EFCB066B38D.jpg",
             "title": "I AM MINDFUL",
@@ -81,8 +82,8 @@
           "type": "column",
           "settings": {
             "image": "shopify:\/\/shop_images\/9A097BA8-6802-4CB3-B37E-0E8EA1691A33.jpg",
-            "title": "Self-Care Care Package",
-            "text": "<p>A Care Package filled with Self-Care products including, beautifully handmade soaps and bath bombs to make them feel special and loved. Designed with Self-Care in mind, who wouldn’t love receiving this gift. <br\/><a href=\"\/products\/mini-indulgence\" title=\"Best Friend Care Package\">Explore Bundle<\/a><\/p>"
+            "title": "SELF-CARE CARE PACKAGE",
+            "text": "<p>A Care Package filled with Self-Care products to make them feel special and loved including, beautiful handmade soap and a bath bomb. Designed with Self-Care in mind, who wouldn’t love receiving this gift. <br\/><a href=\"\/products\/mini-indulgence\" title=\"Best Friend Care Package\">Explore Bundle<\/a><\/p>"
           }
         },
         "column3": {
