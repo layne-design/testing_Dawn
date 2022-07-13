@@ -79,11 +79,10 @@
         },
         "column2": {
           "type": "column",
-          "disabled": true,
           "settings": {
-            "image": "shopify:\/\/shop_images\/E835B060-D106-43ED-A53F-F5B34FCF9E99.jpg",
-            "title": "BREASTFEEDING MUMS",
-            "text": "<p>The perfect gift for the mum embarking on her breastfeeding journey. This gift box has all that she needs to get started. Filled with beautifully sourced products that will be sure to make her smile.<br\/><a href=\"\/products\/breastfeeding-mum\" title=\"Breastfeeding mum\">Explore Bundle<\/a><\/p>"
+            "image": "shopify:\/\/shop_images\/9A097BA8-6802-4CB3-B37E-0E8EA1691A33.jpg",
+            "title": "Best Friend Care Package",
+            "text": "<p>A Care Package filled with Self-Care products including, beautifully handmade soaps and bath bombs to make them feel special and loved. Designed with Self-Care in mind, who wouldn’t love receiving this gift. <br\/><a href=\"\/products\/mini-indulgence\" title=\"Best Friend Care Package\">Explore Bundle<\/a><\/p>"
           }
         },
         "column3": {
