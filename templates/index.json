@@ -94,6 +94,14 @@
             "text": "<p>A Care Package filled with Self-Care products to make them feel special and loved including, beautiful handmade soap and a bath bomb. Designed with Self-Care in mind, who wouldn’t love receiving this gift. <br\/><a href=\"\/products\/mini-indulgence\" title=\"Best Friend Care Package\">Explore Bundle<\/a><\/p>"
           }
         },
+        "ad335c6a-0e71-41ce-8f92-f2bca73f875f": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/755D855C-811D-4230-BFD5-9F302B345E6D.jpg",
+            "title": "BREASTFEEDING MUM BUNDLE",
+            "text": "<p>The perfect gift for the mum embarking on her breastfeeding journey. This gift box has all that she needs to get started. Filled with beautifully sourced products that will be sure to make her smile.<\/p><p><a href=\"\/products\/breastfeeding-mum\" title=\"Breastfeeding mum\">Explore Bundle<\/a><\/p>"
+          }
+        },
         "column3": {
           "type": "column",
           "disabled": true,
@@ -108,6 +116,7 @@
         "column1",
         "4d74b434-b284-4a51-919c-b83023da7083",
         "column2",
+        "ad335c6a-0e71-41ce-8f92-f2bca73f875f",
         "column3"
       ],
       "settings": {
