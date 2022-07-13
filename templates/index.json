@@ -78,6 +78,14 @@
             "text": "<p>Included in this box is the very popular Daily Mantras by Lisa Messenger. These artfully presented quotes can be used as meditations, as musings, or as your daily dose of mindfulness; one for each day of the year.<br\/><a href=\"\/products\/daily-mantras\" title=\"I Am Mindful Bundle\">Explore Bundle<\/a><\/p>"
           }
         },
+        "4d74b434-b284-4a51-919c-b83023da7083": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/FFB5B7E6-68F9-4A92-BD2C-C4B198E356FB.jpg",
+            "title": "PREGNANCY BUNDLE",
+            "text": "<p>Included in this pregnancy box is nourishing belly oil for the growing bump, perfect for postpartum use as well. Handmade vegan soap that leaves the skin feeling fresh and soft. A must have for Pregnant ladies.<\/p><p><a href=\"\/products\/pregnancy-care-box\" title=\"Pregnancy Bundle\">Explore Bundle<\/a><\/p>"
+          }
+        },
         "column2": {
           "type": "column",
           "settings": {
@@ -98,6 +106,7 @@
       },
       "block_order": [
         "column1",
+        "4d74b434-b284-4a51-919c-b83023da7083",
         "column2",
         "column3"
       ],
