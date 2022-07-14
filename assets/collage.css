@@ -35,10 +35,16 @@
 .collage--mobile {
   grid-template-columns: repeat(2, 1fr);
 }
+.collage-new--mobile {
+  grid-template-columns: repeat(2, 1fr);
+}
 
 @media screen and (min-width: 750px) {
   .collage {
     grid-template-columns: 1fr 1fr 1fr;
+  }
+  .collage-new {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   }
 }
 
