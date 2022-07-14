@@ -26,7 +26,12 @@
   display: grid;
   gap: 1rem;
 }
-
+.collage-new {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
 .collage--mobile {
   grid-template-columns: repeat(2, 1fr);
 }
