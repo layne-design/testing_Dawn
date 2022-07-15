@@ -130,6 +130,46 @@
         "swipe_on_mobile": true
       }
     },
+    "165788083037c05f87": {
+      "type": "product-slider",
+      "blocks": {
+        "b0069356-46cc-438a-a8b5-3d692d773413": {
+          "type": "card",
+          "settings": {
+            "product_item": "cmc-dummies"
+          }
+        },
+        "b0d4fda2-3645-4cc4-916e-bec30537f4f3": {
+          "type": "card",
+          "settings": {
+            "product_item": "baby-honey-bunny-boy-blue"
+          }
+        },
+        "fec7cd28-1cee-442e-bf31-06fc22a7bcab": {
+          "type": "card",
+          "settings": {
+            "product_item": "baby-milestone-set"
+          }
+        },
+        "fecd191d-a698-43a5-b1f1-78d101e80241": {
+          "type": "card",
+          "settings": {
+            "product_item": "breastfeeding-essentials"
+          }
+        }
+      },
+      "block_order": [
+        "b0069356-46cc-438a-a8b5-3d692d773413",
+        "b0d4fda2-3645-4cc4-916e-bec30537f4f3",
+        "fec7cd28-1cee-442e-bf31-06fc22a7bcab",
+        "fecd191d-a698-43a5-b1f1-78d101e80241"
+      ],
+      "settings": {
+        "navigation_amount": 4,
+        "navigation_color": "",
+        "title": "Products slider"
+      }
+    },
     "16383580317d95c263": {
       "type": "featured-product",
       "disabled": true,
@@ -272,6 +312,7 @@
     "image_banner",
     "rich_text",
     "multi_column",
+    "165788083037c05f87",
     "16383580317d95c263",
     "16384263603f201c3e",
     "1638354778e7735653",
