@@ -26,26 +26,17 @@
   display: grid;
   gap: 1rem;
 }
-.collage-new {
-  display: grid;
-  gap: 1rem;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-}
+
 .collage--mobile {
   grid-template-columns: repeat(2, 1fr);
 }
-.collage-new--mobile {
-  grid-template-columns: repeat(2, 1fr);
-}
+
 
 @media screen and (min-width: 750px) {
   .collage {
     grid-template-columns: 1fr 1fr 1fr;
   }
-  .collage-new {
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  }
+  
 }
 
 .collage-card {
