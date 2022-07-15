@@ -23,7 +23,7 @@
 
 @media screen and (min-width: 750px) {
   .image-with-text__grid--reverse {
-    flex-direction:none ;
+    flex-direction:row-reverse ;
   }
 }
 
