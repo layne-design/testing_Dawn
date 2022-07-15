@@ -156,13 +156,20 @@
           "settings": {
             "product_item": "breastfeeding-essentials"
           }
+        },
+        "1083c00d-4acf-4da8-877d-37609cef48ea": {
+          "type": "card",
+          "settings": {
+            "product_item": "daily-mantras"
+          }
         }
       },
       "block_order": [
         "b0069356-46cc-438a-a8b5-3d692d773413",
         "b0d4fda2-3645-4cc4-916e-bec30537f4f3",
         "fec7cd28-1cee-442e-bf31-06fc22a7bcab",
-        "fecd191d-a698-43a5-b1f1-78d101e80241"
+        "fecd191d-a698-43a5-b1f1-78d101e80241",
+        "1083c00d-4acf-4da8-877d-37609cef48ea"
       ],
       "settings": {
         "navigation_amount": 4,
