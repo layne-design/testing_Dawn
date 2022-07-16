@@ -132,6 +132,7 @@
     },
     "165788083037c05f87": {
       "type": "product-slider",
+      "disabled": true,
       "blocks": {
         "b0069356-46cc-438a-a8b5-3d692d773413": {
           "type": "card",
