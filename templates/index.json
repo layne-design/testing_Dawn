@@ -245,7 +245,7 @@
       "settings": {
         "image": "shopify:\/\/shop_images\/9A097BA8-6802-4CB3-B37E-0E8EA1691A33.jpg",
         "height": "adapt",
-        "color_scheme": "background-1",
+        "color_scheme": "accent-1",
         "layout": "text_first"
       }
     },
