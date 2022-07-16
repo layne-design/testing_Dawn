@@ -285,6 +285,50 @@
         "layout": "image_first"
       }
     },
+    "1657957070ab3c13cf": {
+      "type": "ultimate-slideshow",
+      "blocks": {
+        "4b4b3040-ba6c-42ce-b7ba-62188b463eca": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/FFB5B7E6-68F9-4A92-BD2C-C4B198E356FB.jpg",
+            "title": "welcome",
+            "title_font": "open_sans_n4",
+            "title_color": "#cd9575",
+            "subtitle": "Welcome to unboxed store",
+            "subtitle_font": "open_sans_n4",
+            "subtitle_color": "#cd9575",
+            "description": "",
+            "description_font": "open_sans_n4",
+            "description_color": "#ffffff",
+            "button_text": "Click Me",
+            "button_link": "shopify:\/\/products\/breastfeeding-essentials",
+            "button_font": "open_sans_n4",
+            "button_style": "outline-square",
+            "button_color": "#ffffff",
+            "button_text_color": "#ffffff",
+            "button_hover_color": "#686868",
+            "button_hover_text_color": "#686868",
+            "content_align": "center",
+            "content_position": "middle-center",
+            "content_animation": "slide-up",
+            "class": ""
+          }
+        }
+      },
+      "block_order": [
+        "4b4b3040-ba6c-42ce-b7ba-62188b463eca"
+      ],
+      "settings": {
+        "slide_animation": "fade",
+        "autoplay": "no",
+        "autoplay_delay": 5000,
+        "overlay": false,
+        "nav_color": "#ffffff",
+        "class": "",
+        "css": ""
+      }
+    },
     "1638354778e7735653": {
       "type": "collage",
       "blocks": {
@@ -360,6 +404,7 @@
     "16383580317d95c263",
     "1657906096937987fc",
     "16384263603f201c3e",
+    "1657957070ab3c13cf",
     "1638354778e7735653",
     "1655463668ce44fee7",
     "1638430344b6d3dcb1"
