@@ -109,6 +109,12 @@
         "full_width": true
       }
     },
+    "1658382176aafd98b6": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": ""
+      }
+    },
     "multi_column": {
       "type": "multicolumn",
       "blocks": {
@@ -398,6 +404,7 @@
     "1657957070ab3c13cf",
     "image_banner",
     "rich_text",
+    "1658382176aafd98b6",
     "multi_column",
     "165788083037c05f87",
     "16383580317d95c263",
