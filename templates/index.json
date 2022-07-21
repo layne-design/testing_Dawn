@@ -5,7 +5,6 @@
       "blocks": {
         "c0f6e37a-2015-4c20-a64d-1fa7c463ee84": {
           "type": "buttons",
-          "disabled": true,
           "settings": {
             "button_label_1": "Shop Self Care",
             "button_link_1": "shopify:\/\/collections\/mother-s-day",
@@ -48,7 +47,6 @@
         },
         "button": {
           "type": "button",
-          "disabled": true,
           "settings": {
             "button_label": "Shop now",
             "button_link": "",
@@ -71,7 +69,6 @@
       "blocks": {
         "column1": {
           "type": "column",
-          "disabled": true,
           "settings": {
             "image": "shopify:\/\/shop_images\/BC903CAE-FC79-421C-A734-7EFCB066B38D.jpg",
             "title": "I AM MINDFUL",
@@ -132,7 +129,6 @@
     },
     "165788083037c05f87": {
       "type": "product-slider",
-      "disabled": true,
       "blocks": {
         "b0069356-46cc-438a-a8b5-3d692d773413": {
           "type": "card",
@@ -332,6 +328,7 @@
     },
     "1638354778e7735653": {
       "type": "collage",
+      "disabled": true,
       "blocks": {
         "3d891cbf-8ccb-4ba2-b08a-3e3ad2e48329": {
           "type": "image",
