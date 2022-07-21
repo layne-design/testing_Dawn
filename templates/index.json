@@ -130,20 +130,6 @@
     "165788083037c05f87": {
       "type": "product-slider",
       "blocks": {
-        "b0069356-46cc-438a-a8b5-3d692d773413": {
-          "type": "card",
-          "disabled": true,
-          "settings": {
-            "product_item": ""
-          }
-        },
-        "b0d4fda2-3645-4cc4-916e-bec30537f4f3": {
-          "type": "card",
-          "disabled": true,
-          "settings": {
-            "product_item": ""
-          }
-        },
         "fec7cd28-1cee-442e-bf31-06fc22a7bcab": {
           "type": "card",
           "settings": {
@@ -164,8 +150,6 @@
         }
       },
       "block_order": [
-        "b0069356-46cc-438a-a8b5-3d692d773413",
-        "b0d4fda2-3645-4cc4-916e-bec30537f4f3",
         "fec7cd28-1cee-442e-bf31-06fc22a7bcab",
         "fecd191d-a698-43a5-b1f1-78d101e80241",
         "1083c00d-4acf-4da8-877d-37609cef48ea"
