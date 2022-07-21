@@ -1,4 +1,31 @@
 {{ 'badges-section.css' | asset_url | stylesheet_tag }}
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Create four equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 25%;
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the four columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
+</style>
 
 <link rel="stylesheet" href="{{ 'badges-section.css' | asset_url }}" media="print" onload="this.media='all'">
 
@@ -23,19 +50,19 @@
 
   <div class="row">
   <div class="column" style="background-color:#aaa;">
-    <h2>Column 1</h2>
+    <h2>Free shipping on all orders</h2>
     <p>Some text..</p>
   </div>
   <div class="column" style="background-color:#bbb;">
-    <h2>Column 2</h2>
+    <h2>24 hour processing</h2>
     <p>Some text..</p>
   </div>
   <div class="column" style="background-color:#ccc;">
-    <h2>Column 3</h2>
+    <h2>Australian made and owned</h2>
     <p>Some text..</p>
   </div>
   <div class="column" style="background-color:#ddd;">
-    <h2>Column 4</h2>
+    <h2>Support small</h2>
     <p>Some text..</p>
   </div>
 </div>
