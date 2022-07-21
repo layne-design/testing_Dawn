@@ -147,12 +147,26 @@
           "settings": {
             "product_item": "daily-mantras"
           }
+        },
+        "d5175e8d-c68d-42c7-9762-dc1ea43939ed": {
+          "type": "card",
+          "settings": {
+            "product_item": "breastfeeding-mum"
+          }
+        },
+        "7e13ff36-c8d2-4189-a8d6-6c9b87ac5403": {
+          "type": "card",
+          "settings": {
+            "product_item": "live-your-best-life-bundle"
+          }
         }
       },
       "block_order": [
         "fec7cd28-1cee-442e-bf31-06fc22a7bcab",
         "fecd191d-a698-43a5-b1f1-78d101e80241",
-        "1083c00d-4acf-4da8-877d-37609cef48ea"
+        "1083c00d-4acf-4da8-877d-37609cef48ea",
+        "d5175e8d-c68d-42c7-9762-dc1ea43939ed",
+        "7e13ff36-c8d2-4189-a8d6-6c9b87ac5403"
       ],
       "settings": {
         "navigation_amount": 4,
