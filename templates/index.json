@@ -132,12 +132,14 @@
       "blocks": {
         "b0069356-46cc-438a-a8b5-3d692d773413": {
           "type": "card",
+          "disabled": true,
           "settings": {
             "product_item": "cmc-dummies"
           }
         },
         "b0d4fda2-3645-4cc4-916e-bec30537f4f3": {
           "type": "card",
+          "disabled": true,
           "settings": {
             "product_item": "baby-honey-bunny-boy-blue"
           }
@@ -171,7 +173,7 @@
       "settings": {
         "navigation_amount": 4,
         "navigation_color": "",
-        "title": "Best Selling Products"
+        "title": "Shop Our Best Sellers!"
       }
     },
     "16383580317d95c263": {
